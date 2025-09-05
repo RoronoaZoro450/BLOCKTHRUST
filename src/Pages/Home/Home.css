@@ -1,0 +1,302 @@
+/* Home Container */
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: heroSlideIn 1s ease-out;
+  }
+  
+  @keyframes heroSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff, #a8edea, #fed6e3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Search Form */
+  .hero form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .hero form input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  .hero form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .hero form input:focus {
+    border-color: #a8edea;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(168, 237, 234, 0.3);
+  }
+  
+  .hero form button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #0b004e;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .hero form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(168, 237, 234, 0.4);
+    background: linear-gradient(135deg, #fed6e3, #a8edea);
+  }
+  
+  /* Crypto Table */
+  .crypto-table {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: tableSlideIn 0.8s ease-out 0.3s both;
+  }
+  
+  @keyframes tableSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Table Header */
+  .crypto-table .table-layout:first-child {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #a8edea;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Table Layout */
+  .table-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 2fr 2fr;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .table-layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .table-layout:not(:first-child):hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+    border-left: 3px solid #a8edea;
+  }
+  
+  .table-layout:not(:first-child):hover::before {
+    left: 100%;
+  }
+  
+  /* Coin Image and Name */
+  .table-layout div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .table-layout div img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .table-layout:hover div img {
+    transform: scale(1.1);
+    border-color: #a8edea;
+  }
+  
+  .table-layout div p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  /* Price and Market Cap */
+  .table-layout > p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .table-layout > p:first-child {
+    font-weight: 600;
+    color: #fed6e3;
+  }
+  
+  /* Market Cap Column */
+  .market-cap {
+    text-align: right;
+  }
+  
+  /* Price Change Colors */
+  .green {
+    color: #4ade80 !important;
+    font-weight: 600;
+  }
+  
+  .red {
+    color: #ef4444 !important;
+    font-weight: 600;
+  }
+  
+  /* Add percentage symbol and formatting */
+  .green::after,
+  .red::after {
+    content: '%';
+    font-size: 0.9em;
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home {
+      padding: 1rem;
+    }
+    
+    .hero {
+      padding: 3rem 1.5rem;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero form {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .hero form button {
+      padding: 1rem;
+    }
+    
+    .table-layout {
+      grid-template-columns: 0.5fr 2fr 1.5fr 1.5fr 1.5fr;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .table-layout div {
+      gap: 0.5rem;
+    }
+    
+    .table-layout div img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .table-layout {
+      grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+      padding: 0.8rem;
+      font-size: 0.8rem;
+    }
+    
+    .crypto-table .table-layout:first-child {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .market-cap {
+      text-align: center;
+    }
+  }

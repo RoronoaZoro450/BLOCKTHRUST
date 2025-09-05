@@ -1,0 +1,11 @@
+.footer{
+    margin: auto;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    bottom: 0;
+    width: 80%;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #989898;
+}
